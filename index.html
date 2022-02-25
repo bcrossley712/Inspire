@@ -5,30 +5,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+  <link rel="icon" href="https://apprecs.org/gp/images/app-icons/300/64/in.quotesdaily.inspirational.jpg">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>Inspire</title>
+  <style>
+    body.debug .container,
+    body.debug .container-fluid {
+      outline: 2px double blue;
+      outline-offset: -2px;
+    }
+
+    body.debug .row {
+      outline: 2px dashed red;
+      outline-offset: -2px;
+    }
+
+    body.debug [class*="col-"] {
+      outline: 2px dotted forestgreen;
+      outline-offset: -3px;
+    }
+  </style>
 </head>
 
-<body>
+<body class="">
   <main>
-    <div class="container-fluid">
+    <div class="container-fluid d-flex flex-column min-height">
       <div class="row">
         <div class="col-12">
-          <div id="weather" class="d-flex justify-content-end">Weather</div>
+          <div id="weather" class="d-flex justify-content-end">
+
+          </div>
+        </div>
+      </div>
+      <div class="row flex-grow-1">
+        <div class="col-12">
+          <div id="clock" class="justify-content-center align-items-center d-flex h-100 clock">
+          </div>
         </div>
       </div>
       <div class="row">
         <div class="col-12">
-          <div id="clock" class="justify-content-center align-items-center d-flex">Clock</div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <div id="todo" class="d-flex justify-content-end">Todo</div>
+          <div class="d-flex justify-content-end">
+            <div class="bg-dark rounded shadow p-2">
+              <h4>Daily Checklist</h4>
+              <div id="todo">
+                <!-- STUB todo template -->
+                <li>TODO</li>
+                <li>TODO</li>
+                <li>TODO</li>
+
+                <!-- -------- -->
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row">
@@ -36,7 +70,9 @@
           <div id="image-id">Image-ID</div>
         </div>
         <div class="col-6 d-flex justify-content-center">
-          <div id="quote">Quote</div>
+          <h5 id="quote" class="quote">
+            <span class="hide"></span>
+          </h5>
         </div>
         <div class="col-3 d-flex justify-content-end">
           <div>Todo checklist label</div>
@@ -45,6 +81,7 @@
     </div>
   </main>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>

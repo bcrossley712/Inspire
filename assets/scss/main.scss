@@ -12,12 +12,32 @@ body {
   background-image: url('https://thiscatdoesnotexist.com');
   background-size: cover;
   background-repeat: no-repeat;
-  
+  color: #f0e9e9;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-family: 'Roboto', sans-serif;
 }
 
 main {
   flex-grow: 1;
 }
 
+.min-height{
+  min-height: 100vh;
+}
 
+.clock{
+  font-size: 75px;
+}
 
+.hide{
+opacity: 0;
+transition: all .5 ease;
+
+}
+
+.quote:hover .hide{
+  opacity: 1;
+transition: all .5 ease;
+
+}
