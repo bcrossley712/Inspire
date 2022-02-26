@@ -9,14 +9,15 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: $body-bg;
-  background-image: url('https://thiscatdoesnotexist.com');
   background-size: cover;
   background-repeat: no-repeat;
   color: #f0e9e9;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+  // -webkit-text-stroke-width: 1px;
+  // -webkit-text-stroke-color: black;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.514), -1px -1px 3px rgba(0, 0, 0, 0.514);
   font-family: 'Roboto', sans-serif;
 }
+
 
 main {
   flex-grow: 1;
@@ -28,6 +29,7 @@ main {
 
 .clock{
   font-size: 75px;
+  // backdrop-filter: blur(1px);
 }
 
 .hide{
@@ -39,5 +41,16 @@ transition: all .5 ease;
 .quote:hover .hide{
   opacity: 1;
 transition: all .5 ease;
+}
 
+.strike{
+  text-decoration: line-through;
+}
+
+.hidden{
+  display: none;
+}
+
+.bg-check{
+  background-color: #1f1b1bad;
 }

@@ -3,13 +3,7 @@ import { weatherService } from "../Services/WeatherService.js";
 import { Pop } from "../Utils/Pop.js";
 
 function _drawWeather() {
-  document.getElementById('weather').innerHTML = `
-            <h3 class="text-center selectable" onclick="app.weatherController.changeTemp()">
-              <div>${Math.ceil((ProxyState.weather.main.temp - 273.15) * (9 / 5) + 32)}°
-              </div>
-              <div>${ProxyState.weather.name}</div>
-            </h3>
-  `
+  document.getElementById('weather').innerHTML = ProxyState.weather.Template
 }
 
 export class WeatherController {

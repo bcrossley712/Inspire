@@ -14095,12 +14095,10 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: #e5e5e5;
-  background-image: url("https://thiscatdoesnotexist.com");
   background-size: cover;
   background-repeat: no-repeat;
   color: #f0e9e9;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.514), -1px -1px 3px rgba(0, 0, 0, 0.514);
   font-family: "Roboto", sans-serif;
 }
 
@@ -14124,6 +14122,18 @@ main {
 .quote:hover .hide {
   opacity: 1;
   transition: all 0.5 ease;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.hidden {
+  display: none;
+}
+
+.bg-check {
+  background-color: #1f1b1bad;
 }
 
 /*# sourceMappingURL=main.css.map */

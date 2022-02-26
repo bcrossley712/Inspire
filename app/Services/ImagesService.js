@@ -4,7 +4,7 @@ import { api } from "./AxiosService.js"
 class ImagesService {
   async getImage() {
     const res = await api.get('images')
-    console.log(res.data);
+    // console.log(res.data);
     ProxyState.image = res.data.url
   }
 
