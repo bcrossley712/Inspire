@@ -16,7 +16,7 @@ export class Todo {
             ${this.description}
           </label>
         </div>
-        <i class="mdi mdi-delete-forever text-danger selectable ${this.completed ? '' : 'hidden'}" title="Delete task" onclick="app.todosController.deleteTodo('${this.id}')"></i>
+        <i class="mdi mdi-delete text-danger selectable ${this.completed ? '' : 'hidden'}" title="Delete task" onclick="app.todosController.deleteTodo('${this.id}')"></i>
       </div>
     `;
   }

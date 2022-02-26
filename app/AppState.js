@@ -6,8 +6,11 @@ class AppState extends EventEmitter {
   todos = []
   image = null
   quote = null
+  /** @type {import('./Models/Weather').Weather} */
   weather = null
+  /** @type {import('./Models/Clock').Clock} */
   clock = null
+  user = null
 }
 
 export const ProxyState = new Proxy(new AppState(), {

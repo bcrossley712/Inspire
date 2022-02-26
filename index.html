@@ -36,18 +36,27 @@
   <main>
     <div class="container-fluid d-flex flex-column min-height">
       <div class="row flex-grow-1">
-        <div class="col-3">
+        <div class="col-md-3">
         </div>
-        <div class="col-6">
+        <div class="col-md-6">
           <div class="justify-content-between align-items-center d-flex flex-column h-100">
             <div></div>
-            <div id="clock" class=" clock"></div>
+            <div>
+              <div id="clock" class="clock selectable" onclick="app.clockController.changeTime()"></div>
+              <h1>Good <span id="day-time">Morning</span> <span class="selectable" id="user"
+                  onclick="app.userController.changeName()"></span></h1>
+              <form onsubmit="app.userController.newUser()"><input type="text" class="form-control hidden" name="name"
+                  id="name" aria-describedby="helpId" placeholder="Name..."></form>
+              <div class="mb-3">
+
+              </div>
+            </div>
             <h4 id="quote" class="quote align-items-end">
               <span class="hide"></span>
             </h4>
           </div>
         </div>
-        <div class="col-3 d-flex flex-column justify-content-between">
+        <div class="col-md-3 d-flex flex-column justify-content-between">
           <div id="weather" class="d-flex justify-content-end">
           </div>
           <div class="m-2">

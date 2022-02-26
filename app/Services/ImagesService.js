@@ -5,7 +5,7 @@ class ImagesService {
   async getImage() {
     const res = await api.get('images')
     // console.log(res.data);
-    ProxyState.image = res.data.url
+    ProxyState.image = res.data.largeImgUrl
   }
 
 }
