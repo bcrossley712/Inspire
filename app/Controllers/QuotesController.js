@@ -15,7 +15,7 @@ export class QuotesController {
 
   async getQuote() {
     try {
-      quotesService.getQuote()
+      await quotesService.getQuote()
     } catch (error) {
       Pop.toast(error.message, 'error')
       console.error(error.message);

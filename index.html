@@ -13,35 +13,19 @@
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>Inspire</title>
-  <style>
-    body.debug .container,
-    body.debug .container-fluid {
-      outline: 2px double blue;
-      outline-offset: -2px;
-    }
-
-    body.debug .row {
-      outline: 2px dashed red;
-      outline-offset: -2px;
-    }
-
-    body.debug [class*="col-"] {
-      outline: 2px dotted forestgreen;
-      outline-offset: -3px;
-    }
-  </style>
 </head>
 
 <body class="">
   <main>
     <div class="container-fluid d-flex flex-column min-height">
       <div class="row flex-grow-1">
-        <div class="col-md-3">
+        <div class="col-md-3 d-flex align-items-end">
+          <button class="btn btn-outline-primary m-2" onclick="app.imagesController.getImage()">Change Image</button>
         </div>
         <div class="col-md-6">
           <div class="justify-content-between align-items-center d-flex flex-column h-100">
             <div></div>
-            <div>
+            <div class="text-center">
               <div id="clock" class="clock selectable" onclick="app.clockController.changeTime()"></div>
               <h1>Good <span id="day-time">Morning</span> <span class="selectable" id="user"
                   onclick="app.userController.changeName()"></span></h1>
@@ -51,8 +35,7 @@
 
               </div>
             </div>
-            <h4 id="quote" class="quote align-items-end">
-              <span class="hide"></span>
+            <h4 id="quote" class="quote align-items-end selectable" onclick="app.quotesController.getQuote()">
             </h4>
           </div>
         </div>

@@ -14119,12 +14119,11 @@ main {
 
 .hide {
   opacity: 0;
-  transition: all 0.5 ease;
+  transition: all 0.5s ease;
 }
 
 .quote:hover .hide {
   opacity: 1;
-  transition: all 0.5 ease;
 }
 
 .strike {
@@ -14137,6 +14136,10 @@ main {
 
 .bg-check {
   background-color: #1f1b1bad;
+}
+
+.img-sm {
+  height: 8vh;
 }
 
 /*# sourceMappingURL=main.css.map */

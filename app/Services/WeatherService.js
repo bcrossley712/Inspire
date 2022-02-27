@@ -6,7 +6,7 @@ import { api } from "./AxiosService.js"
 class WeatherService {
   async getWeather() {
     const res = await api.get('weather')
-    // console.log(res.data);
+    console.log(res.data);
     ProxyState.weather = new Weather(res.data)
   }
 

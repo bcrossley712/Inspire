@@ -7,9 +7,7 @@ function _drawUser() {
   if (ProxyState.user != null) {
     document.getElementById('user').innerHTML = ProxyState.user
   } else {
-    document.getElementById('user').innerHTML = `
-      <form onsubmit="app.userController.newUser()"><input type="text" class="form-control" name="name"
-        id="name" aria-describedby="helpId" placeholder="Name..."></form>`
+    document.getElementById('name').classList.remove('hidden')
   }
 }
 
@@ -18,7 +16,7 @@ export class UserController {
   constructor() {
     ProxyState.on('user', _drawUser)
     loadUser()
-    _drawUser
+    _drawUser()
   }
 
   newUser() {
