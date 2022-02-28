@@ -11,9 +11,9 @@ class ClockService {
     let dayTime = ''
     if (hours < 12) {
       dayTime = 'Morning'
-    } if (hours > 12 && hours < 5) {
+    } if (hours > 12 && hours < 17) {
       dayTime = 'Afternoon'
-    } else {
+    } if (hours >= 17) {
       dayTime = 'Evening'
     }
     ProxyState.clock = new Clock({
@@ -33,7 +33,7 @@ class ClockService {
       dayTime = 'Morning'
     } if (hours > 12 && hours < 17) {
       dayTime = 'Afternoon'
-    } else {
+    } if (hours >= 17) {
       dayTime = 'Evening'
     }
     ProxyState.clock = new Clock({
